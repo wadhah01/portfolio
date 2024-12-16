@@ -2,8 +2,7 @@ import { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import Typed from 'typed.js';
 import { Github, Linkedin, FileText } from 'lucide-react';
-import DeveloperAnimation from './DeveloperAnimation';
-import { Lottie } from 'lottie-react';
+import Lottie from 'lottie-react';
 import HiAnimation from './lottie/HiAnimation.json';
 
 const Hero = () => {
@@ -11,17 +10,20 @@ const Hero = () => {
 
   useEffect(() => {
     const typed = new Typed(typedRef.current, {
-      strings: ['Full-Stack Developer', 'Problem Solver', 'Tech Enthusiast'],
+      strings: ['Software engineer','Full-Stack Developer', 'Problem Solver', 'Tech Enthusiast'],
       typeSpeed: 50,
       backSpeed: 30,
-      loop: true
+      loop: true,
     });
 
     return () => typed.destroy();
   }, []);
 
   return (
-    <div id="about" className="min-h-screen relative overflow-hidden bg-gradient-to-br from-navy via-navy/95 to-navy">
+    <div
+      id="about"
+      className="min-h-screen relative overflow-hidden bg-gradient-to-br from-navy via-navy/95 to-navy"
+    >
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute w-[500px] h-[500px] bg-gold/5 rounded-full blur-3xl animate-pulse -top-48 -left-48" />
@@ -36,13 +38,13 @@ const Hero = () => {
                 y: Math.random() * window.innerHeight,
               }}
               animate={{
-                y: [null, Math.random() * -100, null],
+                y: [Math.random() * window.innerHeight, Math.random() * -100, Math.random() * window.innerHeight],
                 opacity: [0.2, 1, 0.2],
               }}
               transition={{
                 duration: Math.random() * 3 + 2,
                 repeat: Infinity,
-                ease: "linear",
+                ease: 'linear',
               }}
             />
           ))}
@@ -65,7 +67,7 @@ const Hero = () => {
           >
             Hi, I'm <span className="text-gold">Wadhah</span>
           </motion.h1>
-          
+
           <motion.h2
             className="text-2xl md:text-3xl mb-8 text-gray-300"
             initial={{ opacity: 0, y: 20 }}
@@ -74,18 +76,18 @@ const Hero = () => {
           >
             <span ref={typedRef}></span>
           </motion.h2>
-          
+
           <motion.p
             className="text-xl mb-12 text-gray-300"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6 }}
           >
-            Passionate about creating elegant solutions to complex problems. 
-            Specializing in full-stack development with a focus on user experience 
-            and scalable architecture.
+            Passionate about creating elegant solutions to complex problems.
+            Specializing in full-stack development with a focus on user
+            experience and scalable architecture.
           </motion.p>
-          
+
           <motion.div
             className="flex gap-6"
             initial={{ opacity: 0, y: 20 }}
@@ -121,7 +123,12 @@ const Hero = () => {
 
         {/* Lottie Animation on the right side */}
         <div className="flex items-center justify-center w-full max-w-lg">
-          <Lottie animationData={HiAnimation} loop={true} autoplay={true} style={{ width: '400px', height: '400px' }} />
+          <Lottie
+            animationData={HiAnimation}
+            loop={true}
+            autoplay={true}
+            style={{ width: '400px', height: '400px' }}
+          />
         </div>
       </div>
     </div>

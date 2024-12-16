@@ -6,7 +6,7 @@ import Hero from './components/Hero/Hero';
 import Projects from './components/Projects/Projects';
 import Education from './components/Education/Education';
 import Achievements from './components/Achievements/Achievements';
-
+import About from './components/AboutMe/About';
 function App() {
   const [loading, setLoading] = useState(true);
 
@@ -28,6 +28,7 @@ function App() {
         <>
           <Navbar />
           <Hero />
+          <About />
           <Projects />
           <Education />
           <Achievements />
