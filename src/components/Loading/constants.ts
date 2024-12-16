@@ -1,8 +1,8 @@
 export const TYPING_DELAY = 50;
 export const LOADING_STEP_DELAY = 300;
-export const ERROR_DISPLAY_DURATION = 7000;
-export const ERROR_PAUSE_DURATION = 7000;
-export const FINAL_WAIT_DURATION = 4000;
+export const ERROR_DISPLAY_DURATION = 4000;
+export const ERROR_PAUSE_DURATION = 1000;
+export const FINAL_WAIT_DURATION = 3000;
 
 export const command = 'npm run dev';
 

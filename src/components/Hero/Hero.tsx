@@ -3,6 +3,8 @@ import { motion } from 'framer-motion';
 import Typed from 'typed.js';
 import { Github, Linkedin, FileText } from 'lucide-react';
 import DeveloperAnimation from './DeveloperAnimation';
+import { Lottie } from 'lottie-react';
+import HiAnimation from './lottie/HiAnimation.json';
 
 const Hero = () => {
   const typedRef = useRef(null);
@@ -117,7 +119,10 @@ const Hero = () => {
           </motion.div>
         </motion.div>
 
-        <DeveloperAnimation />
+        {/* Lottie Animation on the right side */}
+        <div className="flex items-center justify-center w-full max-w-lg">
+          <Lottie animationData={HiAnimation} loop={true} autoplay={true} style={{ width: '400px', height: '400px' }} />
+        </div>
       </div>
     </div>
   );

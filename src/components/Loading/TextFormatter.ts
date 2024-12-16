@@ -7,7 +7,7 @@ export const formatTerminalText = (text: string): string => {
       return `<span class="text-yellow-500 font-bold">${line}</span>`;
     }
     if (line.includes('Just Kidding!')) {
-      return `<span class="text-emerald-400 font-bold text-3xl">${line}</span>`;
+      return `<span class="text-emerald-400 font-bold text-xl">${line}</span>`;
     }
     return line;
   }).join('\n');

@@ -20,7 +20,7 @@ const educationData = [
 
 const Education = () => {
   return (
-    <section id="education" className="py-20 bg-navy text-white">
+    <section className="py-20 bg-navy text-white">
       <div className="container mx-auto px-4">
         <h2 className="text-4xl font-bold text-center mb-12">
           Education

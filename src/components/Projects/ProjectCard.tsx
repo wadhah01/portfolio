@@ -20,7 +20,7 @@ const ProjectCard = ({ title, description, image, demoUrl, githubUrl, techStack 
     if (isHovered) {
       timeoutId = setTimeout(() => {
         setIsFlipped(true);
-      }, 5000);
+      }, 2000);
     } else {
       setIsFlipped(false);
     }
@@ -38,7 +38,7 @@ const ProjectCard = ({ title, description, image, demoUrl, githubUrl, techStack 
       <motion.div
         className="relative w-full h-full duration-1000 preserve-3d"
         animate={{ rotateY: isFlipped ? 180 : 0 }}
-        transition={{ duration: 0.8 }}
+        transition={{ duration: 0.4 }}
       >
         {/* Front */}
         <div className="absolute inset-0 backface-hidden">

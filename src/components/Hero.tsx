@@ -2,7 +2,6 @@ import { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import Typed from 'typed.js';
 import { Github, Linkedin, FileText } from 'lucide-react';
-import DeveloperAnimation from './DeveloperAnimation';
 
 const Hero = () => {
   const typedRef = useRef(null);
@@ -19,7 +18,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <div id="about" className="min-h-screen relative overflow-hidden bg-gradient-to-br from-navy via-navy/95 to-navy">
+    <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-navy via-navy/95 to-navy">
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute w-[500px] h-[500px] bg-gold/5 rounded-full blur-3xl animate-pulse -top-48 -left-48" />
@@ -48,9 +47,9 @@ const Hero = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 flex items-center justify-between min-h-screen container mx-auto px-4">
+      <div className="relative z-10 flex items-center justify-center min-h-screen">
         <motion.div
-          className="max-w-2xl"
+          className="text-center px-4 max-w-4xl mx-auto"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -61,7 +60,7 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
           >
-            Hi, I'm <span className="text-gold">Wadhah</span>
+            Hi, I'm <span className="text-gold">Wael</span>
           </motion.h1>
           
           <motion.h2
@@ -74,7 +73,7 @@ const Hero = () => {
           </motion.h2>
           
           <motion.p
-            className="text-xl mb-12 text-gray-300"
+            className="text-xl mb-12 text-gray-300 max-w-2xl mx-auto"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6 }}
@@ -85,7 +84,7 @@ const Hero = () => {
           </motion.p>
           
           <motion.div
-            className="flex gap-6"
+            className="flex gap-6 justify-center"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.8 }}
@@ -116,8 +115,6 @@ const Hero = () => {
             </a>
           </motion.div>
         </motion.div>
-
-        <DeveloperAnimation />
       </div>
     </div>
   );

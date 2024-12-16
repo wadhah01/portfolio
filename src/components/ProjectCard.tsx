@@ -1,6 +1,6 @@
-import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Github, ExternalLink } from 'lucide-react';
+import { useState, useEffect } from 'react';
 
 interface ProjectCardProps {
   title: string;
@@ -11,7 +11,7 @@ interface ProjectCardProps {
   techStack: string[];
 }
 
-const ProjectCard = ({ title, description, image, demoUrl, githubUrl, techStack }: ProjectCardProps) => {
+export const ProjectCard = ({ title, description, image, demoUrl, githubUrl, techStack }: ProjectCardProps) => {
   const [isFlipped, setIsFlipped] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
 
@@ -29,7 +29,7 @@ const ProjectCard = ({ title, description, image, demoUrl, githubUrl, techStack 
 
   return (
     <motion.div
-      className="relative w-full max-w-sm h-[400px] group perspective mx-auto"
+      className="relative w-full max-w-sm h-[400px] group perspective"
       whileHover={{ scale: 1.02 }}
       onHoverStart={() => setIsHovered(true)}
       onHoverEnd={() => setIsHovered(false)}
