@@ -45,8 +45,7 @@ const About: React.FC = () => {
   animate={{ opacity: 1, x: 0 }}
   transition={{ delay: 0.8, duration: 0.8 }}
 >
-  I’ve worked with different technologies in web, mobile, and blockchain such as React, Node.js, Java, Spring Boot, MongoDB, and Solidity through internships, freelance projects, and full-time positions.
-</motion.p>
+Beyond my current role, I've built server-side and client-side applications for web, mobile, and blockchain projects using technologies like React, Angular, Node.js, Java, Spring Boot, and Solidity. I’m also experienced with databases including MongoDB, MySQL, and PostgreSQL, through a mix of freelance work, internships, and full-time positions.</motion.p>
 
 
         </motion.div>
