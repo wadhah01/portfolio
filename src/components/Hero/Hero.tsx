@@ -111,13 +111,15 @@ const Hero = () => {
               <Linkedin className="w-6 h-6" />
             </a>
             <a
-              href="/resume.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-4 rounded-full bg-white/5 hover:bg-gold/20 transition-colors duration-300"
-            >
-              <FileText className="w-6 h-6" />
-            </a>
+  href="/resume.pdf"
+  target="_blank"
+  rel="noopener noreferrer"
+  download="Wadhah_Agoubi_Resume.pdf"
+  className="p-4 rounded-full bg-white/5 hover:bg-gold/20 transition-colors duration-300"
+  title="Download my  Resume"
+>
+  <FileText className="w-6 h-6" />
+</a>
           </motion.div>
         </motion.div>
 
