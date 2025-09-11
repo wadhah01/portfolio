@@ -5,7 +5,7 @@ const projects = [
   {
     title: "Intranet Communication Platform",
     description: "A platform for internal communication and information sharing between members of the same company.",
-    image: "../img/intranet.png",
+    image: "/img/intranet.png",
     demoUrl: "https://intranetplatefrom.netlify.app/login",
     githubUrl: "https://github.com/username/intranet-platform",
     techStack: ["React", "Node.js", "Express", "MongoDB"]
@@ -13,7 +13,7 @@ const projects = [
   {
     title: "Pokedex Web App",
     description: "An interactive web app displaying Pokémon data using a public API.",
-    image: "../img/pokedex.png",
+    image: "/img/pokedex.png",
     demoUrl: "https://mypokemonx.netlify.app/",
     githubUrl: "https://github.com/wadhah01/Pokemons",
     techStack: ["React", "JavaScript", "PokéAPI","Vite"]
@@ -29,7 +29,7 @@ const projects = [
   {
     title: "SortList Scraper Extension",
     description: "A browser extension to scrape and export data from Sortlist listings.",
-    image: "../img/sortlist.png",
+    image: "..//img/sortlist.png",
     demoUrl: "https://sortlist-scraper.demo",
     githubUrl: "https://github.com/username/sortlist-scraper",
     techStack: ["JavaScript", "Chrome Extension APIs"]
@@ -45,7 +45,7 @@ const projects = [
   {
     title: "Crypto Swap Interface",
     description: "A decentralized PancakeSwap-style interface with real-time token swap functionalities on the Binance Smart Chain.",
-    image: "../img/pancakeswap.png",
+    image: "/img/pancakeswap.png",
     demoUrl: "https://wadhah01.github.io/pcs.github.io/#/swap",
     githubUrl: "https://github.com/wadhah01/pcs.github.io",
     techStack: ["React", "Web3.js", "Solidity", "Binance Smart Chain"]
