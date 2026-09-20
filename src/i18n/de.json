@@ -62,5 +62,8 @@
 "achievements.sc900.description": "Grundlagen von Sicherheit, Compliance, Identität und Governance in Microsoft-Cloud-Umgebungen.",
 
 "achievements.cyberops.title": "Cisco Certified CyberOps Associate",
-"achievements.cyberops.description": "Cybersecurity Operations, einschließlich Netzwerküberwachung, Incident Response, Threat Analysis und Sicherheitsgrundlagen."
+"achievements.cyberops.description": "Cybersecurity Operations, einschließlich Netzwerküberwachung, Incident Response, Threat Analysis und Sicherheitsgrundlagen.",
+"hero.resumeTitle1": "Lebenslauf herunterladen",
+"hero.resumeEnglish": "Englischen Lebenslauf herunterladen",
+"hero.resumeGerman": "Deutschen Lebenslauf herunterladen"
 }

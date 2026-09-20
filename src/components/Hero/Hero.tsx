@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 import Typed from 'typed.js';
 import { Github, Linkedin, FileText } from 'lucide-react';
@@ -8,7 +8,10 @@ import HiAnimation from './lottie/HiAnimation.json';
 
 const Hero = () => {
   const typedRef = useRef<HTMLSpanElement | null>(null);
+  const resumeMenuRef = useRef<HTMLDivElement | null>(null);
+
   const { t, i18n } = useTranslation();
+  const [showResumeOptions, setShowResumeOptions] = useState(false);
 
   useEffect(() => {
     if (!typedRef.current) return;
@@ -24,6 +27,23 @@ const Hero = () => {
 
     return () => typed.destroy();
   }, [t, i18n.language]);
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        resumeMenuRef.current &&
+        !resumeMenuRef.current.contains(event.target as Node)
+      ) {
+        setShowResumeOptions(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
 
   return (
     <div
@@ -123,16 +143,38 @@ const Hero = () => {
               <Linkedin className="w-6 h-6" />
             </a>
 
-            <a
-              href="/resume.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              download="Wadhah_Agoubi_Resume.pdf"
-              className="p-4 rounded-full bg-white/5 hover:bg-gold/20 transition-colors duration-300"
-              title={t('hero.resumeTitle')}
-            >
-              <FileText className="w-6 h-6" />
-            </a>
+           <div className="relative" ref={resumeMenuRef}>
+  <button
+    type="button"
+    onClick={() => setShowResumeOptions((prev) => !prev)}
+    className="p-4 rounded-full bg-white/5 hover:bg-gold/20 transition-colors duration-300"
+    title={t('hero.resumeTitle')}
+  >
+    <FileText className="w-6 h-6" />
+  </button>
+
+  {showResumeOptions && (
+    <div className="absolute left-0 mt-3 w-64 rounded-xl bg-white text-navy shadow-xl overflow-hidden z-50">
+      <a
+        href="/resume-en.pdf"
+        download="Wadhah_Agoubi_Resume_EN.pdf"
+        className="block px-5 py-3 hover:bg-gold/20 transition-colors"
+        onClick={() => setShowResumeOptions(false)}
+      >
+        {t('hero.resumeEnglish')}
+      </a>
+
+      <a
+        href="/resume-de.pdf"
+        download="Wadhah_Agoubi_Lebenslauf_DE.pdf"
+        className="block px-5 py-3 hover:bg-gold/20 transition-colors"
+        onClick={() => setShowResumeOptions(false)}
+      >
+        {t('hero.resumeGerman')}
+      </a>
+    </div>
+  )}
+</div>
           </motion.div>
         </motion.div>
 
