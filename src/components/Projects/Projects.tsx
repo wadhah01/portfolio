@@ -9,8 +9,8 @@ const Projects = () => {
       title: t('projects.intranet.title'),
       description: t('projects.intranet.description'),
       image: '/img/intranet.png',
-      demoUrl: 'https://intranetplatefrom.netlify.app/login',
-      githubUrl: 'https://github.com/username/intranet-platform',
+      demoUrl: 'intranetplatefrom.netlify.app',
+      githubUrl: 'https://github.com/wadhah01/intranet-platform',
       techStack: ['React', 'Node.js', 'Express', 'MongoDB'],
     },
     {
@@ -34,7 +34,7 @@ const Projects = () => {
       description: t('projects.sortlist.description'),
       image: '/img/sortlist.png',
       demoUrl: 'https://sortlist-scraper.demo',
-      githubUrl: 'https://github.com/username/sortlist-scraper',
+      githubUrl: 'https://github.com/wadhah01/SortlistScrapper',
       techStack: ['JavaScript', 'Chrome Extension APIs'],
     },
     {
