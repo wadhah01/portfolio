@@ -3,21 +3,27 @@ import { motion } from 'framer-motion';
 import Typed from 'typed.js';
 import { Github, Linkedin, FileText } from 'lucide-react';
 import Lottie from 'lottie-react';
+import { useTranslation } from 'react-i18next';
 import HiAnimation from './lottie/HiAnimation.json';
 
 const Hero = () => {
-  const typedRef = useRef(null);
+  const typedRef = useRef<HTMLSpanElement | null>(null);
+  const { t, i18n } = useTranslation();
 
   useEffect(() => {
+    if (!typedRef.current) return;
+
+    const typedStrings = t('hero.typed', { returnObjects: true }) as string[];
+
     const typed = new Typed(typedRef.current, {
-      strings: ['Software engineer','Full-Stack Developer', 'Problem Solver', 'Tech Enthusiast'],
+      strings: typedStrings,
       typeSpeed: 50,
       backSpeed: 30,
       loop: true,
     });
 
     return () => typed.destroy();
-  }, []);
+  }, [t, i18n.language]);
 
   return (
     <div
@@ -28,6 +34,7 @@ const Hero = () => {
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute w-[500px] h-[500px] bg-gold/5 rounded-full blur-3xl animate-pulse -top-48 -left-48" />
         <div className="absolute w-[500px] h-[500px] bg-gold/5 rounded-full blur-3xl animate-pulse -bottom-48 -right-48" />
+
         <div className="absolute inset-0">
           {[...Array(50)].map((_, i) => (
             <motion.div
@@ -38,7 +45,11 @@ const Hero = () => {
                 y: Math.random() * window.innerHeight,
               }}
               animate={{
-                y: [Math.random() * window.innerHeight, Math.random() * -100, Math.random() * window.innerHeight],
+                y: [
+                  Math.random() * window.innerHeight,
+                  Math.random() * -100,
+                  Math.random() * window.innerHeight,
+                ],
                 opacity: [0.2, 1, 0.2],
               }}
               transition={{
@@ -65,7 +76,7 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
           >
-            Hi, I'm <span className="text-gold">Wadhah</span>
+            {t('hero.greeting')} <span className="text-gold">Wadhah</span>
           </motion.h1>
 
           <motion.h2
@@ -83,9 +94,7 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6 }}
           >
-            Passionate about creating elegant solutions to complex problems.
-            Specializing in full-stack development with a focus on user
-            experience and scalable architecture.
+            {t('hero.description')}
           </motion.p>
 
           <motion.div
@@ -99,27 +108,31 @@ const Hero = () => {
               target="_blank"
               rel="noopener noreferrer"
               className="p-4 rounded-full bg-white/5 hover:bg-gold/20 transition-colors duration-300"
+              title="GitHub"
             >
               <Github className="w-6 h-6" />
             </a>
+
             <a
               href="https://www.linkedin.com/in/wadhah-agoubi-28224b170/"
               target="_blank"
               rel="noopener noreferrer"
               className="p-4 rounded-full bg-white/5 hover:bg-gold/20 transition-colors duration-300"
+              title="LinkedIn"
             >
               <Linkedin className="w-6 h-6" />
             </a>
+
             <a
-  href="/resume.pdf"
-  target="_blank"
-  rel="noopener noreferrer"
-  download="Wadhah_Agoubi_Resume.pdf"
-  className="p-4 rounded-full bg-white/5 hover:bg-gold/20 transition-colors duration-300"
-  title="Download my  Resume"
->
-  <FileText className="w-6 h-6" />
-</a>
+              href="/resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              download="Wadhah_Agoubi_Resume.pdf"
+              className="p-4 rounded-full bg-white/5 hover:bg-gold/20 transition-colors duration-300"
+              title={t('hero.resumeTitle')}
+            >
+              <FileText className="w-6 h-6" />
+            </a>
           </motion.div>
         </motion.div>
 

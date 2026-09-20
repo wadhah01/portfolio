@@ -1,0 +1,66 @@
+{
+  "nav.about": "Über mich",
+  "nav.projects": "Projekte",
+  "nav.education": "Ausbildung",
+  "nav.achievements": "Erfolge",
+  "hero.greeting": "Hallo, ich bin",
+"hero.typed": [
+  "Softwareentwickler",
+  "Full-Stack Developer",
+  "Technical Integration Engineer",
+  "Problemlöser"
+],
+"hero.description": "Ich entwickle Webanwendungen, REST-APIs, SaaS-Integrationen und Automatisierungsworkflows. Meine Erfahrung umfasst Java/Spring Boot, Node.js, React, Vue.js, Docker, GitLab CI/CD und technische Fehleranalyse.",
+"hero.resumeTitle": "Lebenslauf herunterladen",
+"projects.sectionTitle": "Persönliche Projekte",
+
+"projects.intranet.title": "Intranet-Kommunikationsplattform",
+"projects.intranet.description": "Eine Plattform für interne Kommunikation und Informationsaustausch innerhalb eines Unternehmens.",
+
+"projects.pokedex.title": "Pokedex Web App",
+"projects.pokedex.description": "Eine interaktive Web-App, die Pokémon-Daten über eine öffentliche API anzeigt.",
+
+"projects.coffeeshop.title": "Coffee-Shop-Webseite",
+"projects.coffeeshop.description": "Eine moderne Webseite für ein lokales Café mit Menü, Standort und Kontaktmöglichkeiten.",
+
+"projects.sortlist.title": "SortList Scraper Extension",
+"projects.sortlist.description": "Eine Browser-Erweiterung zum Extrahieren und Exportieren von Daten aus Sortlist-Einträgen.",
+
+"projects.weather.title": "Weather App",
+"projects.weather.description": "Eine einfache Wetter-App, die Echtzeit-Wetterdaten über eine öffentliche API abruft.",
+
+"projects.crypto.title": "Crypto Swap Interface",
+"projects.crypto.description": "Eine dezentrale PancakeSwap-ähnliche Oberfläche mit Token-Swap-Funktionalität auf der Binance Smart Chain.",
+"about.title": "Über",
+"about.highlight": "mich",
+"about.paragraph1": "Ich bin Wadhah, Softwareentwickler und Technical Integration Engineer mit Sitz in Mannheim. Mein Hintergrund liegt in Telekommunikations- und Netzwerktechnik, kombiniert mit über zwei Jahren Erfahrung in Full-Stack-Entwicklung, SaaS-Integrationen, REST-APIs, Datenbanken und technischer Fehleranalyse.",
+"about.paragraph2": "In meiner bisherigen Arbeit habe ich Webanwendungen, Chatbot-/SaaS-Plattformen, Backend-Services und kundenspezifische Lösungen entwickelt und integriert. Dabei habe ich unter anderem mit Java/Spring Boot, Node.js, React, Vue.js, TypeScript, Docker, GitLab CI/CD, MongoDB, MySQL und PostgreSQL gearbeitet. Besonders motiviert mich, praktische technische Probleme zu lösen, Systeme über APIs zu verbinden und komplexe Anforderungen in zuverlässige Softwarelösungen umzusetzen.",
+"education.sectionTitle": "Ausbildung",
+
+"education.preEngineering.degree": "Vorbereitendes Ingenieurstudium",
+"education.preEngineering.institution": "Nabeul Preparatory Engineering Institute",
+"education.preEngineering.location": "Nabeul, Tunesien",
+"education.preEngineering.description": "Vorbereitendes Ingenieurstudium mit Schwerpunkt auf Mathematik, Physik, Chemie und Informationstechnologie.",
+
+"education.engineering.degree": "Ingenieurabschluss in Telekommunikations- und Netzwerktechnik",
+"education.engineering.institution": "National School of Electronics and Telecommunications of Sfax",
+"education.engineering.location": "Sfax, Tunesien",
+"education.engineering.description": "Ingenieurstudium mit Schwerpunkt auf Telekommunikation, Netzwerktechnik, Softwareentwicklung, Systemen und IT-Technologien. Der Abschluss wurde in Deutschland als Master-äquivalent bewertet.",
+
+"education.profileImageAlt": "Profilbild",
+"achievements.sectionTitle": "Zertifikate & Erfolge",
+"achievements.credentialId": "Zertifikats-ID",
+"achievements.viewCredential": "Zertifikat ansehen",
+
+"achievements.mtaPython.title": "Microsoft Technology Associate: Introduction to Programming Using Python",
+"achievements.mtaPython.description": "Grundlagen der Programmierung mit Python, einschließlich Datentypen, Kontrollstrukturen, Funktionen und Fehlerbehandlung.",
+
+"achievements.az900.title": "Microsoft Certified: Azure Fundamentals",
+"achievements.az900.description": "Grundlagen von Cloud-Konzepten, Azure-Diensten, Cloud-Sicherheit, Governance, Compliance und Preismodellen.",
+
+"achievements.sc900.title": "Microsoft Certified: Security, Compliance, and Identity Fundamentals",
+"achievements.sc900.description": "Grundlagen von Sicherheit, Compliance, Identität und Governance in Microsoft-Cloud-Umgebungen.",
+
+"achievements.cyberops.title": "Cisco Certified CyberOps Associate",
+"achievements.cyberops.description": "Cybersecurity Operations, einschließlich Netzwerküberwachung, Incident Response, Threat Analysis und Sicherheitsgrundlagen."
+}

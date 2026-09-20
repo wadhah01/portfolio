@@ -1,9 +1,12 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Lottie from 'lottie-react';
+import { useTranslation } from 'react-i18next';
 import AbtmeLottie from './lottie/AbtmeLottie.json';
 
 const About: React.FC = () => {
+  const { t } = useTranslation();
+
   return (
     <div id="about-me" className="min-h-screen bg-white text-black relative">
       {/* Background Decoration */}
@@ -27,27 +30,26 @@ const About: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
           >
-            About <span className="text-gold">Me</span>
+            {t('about.title')} <span className="text-gold">{t('about.highlight')}</span>
           </motion.h1>
 
           <motion.p
-  className="text-xl mb-12 text-gray-700"
-  initial={{ opacity: 0, y: 20 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ delay: 0.6, duration: 0.8 }}
->
-  I'm Wadhah, a software developer passionate about building innovative solutions with a sense of humor. Currently, I work as a Full Stack Developer focusing on Backend, building scalable systems in a 9-5 role.
-</motion.p>
+            className="text-xl mb-12 text-gray-700"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.6, duration: 0.8 }}
+          >
+            {t('about.paragraph1')}
+          </motion.p>
 
-<motion.p
-  className="text-xl mb-12 text-gray-700"
-  initial={{ opacity: 0, x: -20 }}
-  animate={{ opacity: 1, x: 0 }}
-  transition={{ delay: 0.8, duration: 0.8 }}
->
-Beyond my current role, I've built server-side and client-side applications for web, mobile, and blockchain projects using technologies like React, Angular, Node.js, Java, Spring Boot, and Solidity. I’m also experienced with databases including MongoDB, MySQL, and PostgreSQL, through a mix of freelance work, internships, and full-time positions.</motion.p>
-
-
+          <motion.p
+            className="text-xl mb-12 text-gray-700"
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.8, duration: 0.8 }}
+          >
+            {t('about.paragraph2')}
+          </motion.p>
         </motion.div>
 
         {/* Lottie Animation on the Right */}
